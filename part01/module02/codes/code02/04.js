@@ -19,3 +19,7 @@ console.log(newFunc1._value);  // 23
 console.log(newFunc2._value);  // null
 console.log(newFunc3._value);  // undefined
 
+// teacher
+const ex = fp.flowRight(fp.map(parseInt), Maybe.of)
+console.log(ex('5')); // [5]
+

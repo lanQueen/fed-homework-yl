@@ -4,13 +4,19 @@ const fp = require('lodash/fp');
 const { cars } = require('./basic');
 
 // 无须改动，并在 sanitizeNames() 中使用它
-let _underscope = fp.replace(/\W+/g, '_'); 
+let _underscore = fp.replace(/\W+/g, '_'); 
 
 
 
 // Me
-const sanitizeNames = fp.map(fp.flowRight(_underscope, fp.toLower, fp.prop('name')))
-console.log(sanitizeNames(cars));
+// const sanitizeNames1 = fp.map(fp.flowRight(_underscore, fp.toLower, fp.prop('name')))
+// console.log(sanitizeNames1(cars))
+
+// teacher 更好的方案
+const sanitizeNames2 = fp.flowRight(fp.map(_underscore), fp.map(car => fp.toLower(car.name)))
+console.log(sanitizeNames2(cars));
+
+
 
 /* 
 [

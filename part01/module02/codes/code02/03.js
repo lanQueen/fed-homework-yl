@@ -3,13 +3,16 @@
 
 const fp = require('lodash/fp');
 const { Maybe, Container } = require('./support');
-let safeProp = fp.curry(function (x) { return Maybe.of[x] });
+// let safeProp = fp.curry(function (x) { return Maybe.of[x] });
 let user = { id: 2, name: 'Albert' };
 
 
 
 // Me
-let ex3 = Maybe.of(user)
-            .map(x => fp.first(x.name));
-
+let ex3 = Maybe.of(user).map(x => fp.first(x.name));
 console.log(ex3._value);  // A
+
+// teacher
+let safeProp1 = fp.curry(function (x, o) { return Maybe.of(o[x]) })
+let ex = fp.flowRight(fp.map(fp.first), safeProp1('name'))
+console.log(ex(user));  // ['A']

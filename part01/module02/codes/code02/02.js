@@ -8,5 +8,9 @@ let  xs = Container.of(['do', 'ray', 'me', 'fa', 'so', 'la', 'ti', 'do']);
 
 
 // Me
-let ex2 = xs.map(fp.first);
-console.log(ex2._value); // do
+let ex1 = xs.map(fp.first);
+console.log(ex1._value); // do
+
+// teacher 
+let ex2 = xs.map(fp.map(fp.first));
+console.log(ex2._value); // ['d', 'r', 'm', 'f', 's', 'l', 't', 'd']
