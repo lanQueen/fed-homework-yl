@@ -1,19 +1,13 @@
 
 # 代码目录结构
 
-> README.md --------- 作业简答题答案
+> README.md --------- 简答题答案和编程题 url
 
 > notes ---------- 课程笔记
 
 > codes --------- 代码文件
 > > cli-filename -----------------  自定义脚手架练习
 
-> > gulp-sample-demo ------------------ gulp 自动化构建练习
-> > > + support.js ----- 基础代码
-> > > + 01.js
-> > > + 02.js
-> > > + 03.js
-> > > + 04.js
 
 
 # 一、简答题
@@ -60,6 +54,5 @@
 ```
 
 ## 2. 尝试使用 Gulp 完成项目的自动化构建
-```
-./codes/gulp-sample-demo
-```
+
+url: (https://github.com/lanQueen/gulp-sample-demo.git)
